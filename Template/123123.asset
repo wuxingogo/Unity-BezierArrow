@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17a606c83b64a4305bb000be05ed8e05, type: 3}
+  m_Name: 123123
+  m_EditorClassIdentifier: 
+  hasFile: 1
+  position: {x: 0, y: 0, z: 91.8}
+  rotation: {x: 0, y: 0, z: 0, w: 1}
+  localScale: {x: 1, y: 1, z: 1}
+  position0: {x: -27.59, y: -1.5, z: 0}
+  position1: {x: 0.3, y: -10.7, z: 0}
+  position2: {x: 21, y: -9.4, z: 0}
+  position3: {x: 74.7, y: 11.9, z: 0}
+  step: 1.94
+  yWidthCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: -0.26404715
+      value: 7.276938
+      inSlope: 8.804055
+      outSlope: 8.804055
+      tangentMode: 10
+    - time: 1.0162458
+      value: 18.548708
+      inSlope: 8.804055
+      outSlope: 8.804055
+      tangentMode: 10
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  headRTTexCoord: {x: 0.17777, y: 0}
+  headRDTexCoord: {x: 0.1777, y: 1}
+  headWid: 0.05
+  stepCount: 40

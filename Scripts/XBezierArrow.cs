@@ -40,7 +40,7 @@ public class XBezierArrow : XMonoBehaviour
 		MeshSetup();
 	}
 	[X]
-	void InitMesh()
+	public virtual void InitMesh()
 	{
 		Vertices.Clear();
 		Triangles.Clear();

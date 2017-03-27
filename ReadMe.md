@@ -22,7 +22,8 @@ https://github.com/wuxingogo/WuxingogoExtension
 
 
 
-![github](Screenshot/screenshot.gif "github") 
+![github](ScreenShot/screenshot.gif "github") 
+![github](ScreenShot/screenshot2.gif "github") 
 
 
 ##Copyright, License & Contributors

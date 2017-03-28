@@ -6,7 +6,7 @@
     SubShader {
        Lighting Off
        ZWrite On
-       Cull Off
+//       Cull Off
        Blend SrcAlpha OneMinusSrcAlpha
        Tags {"Queue"="Transparent+100"   "IgnoreProjector"="True"  "RenderType"="Transparent"}
        LOD 200

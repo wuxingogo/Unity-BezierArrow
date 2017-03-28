@@ -32,29 +32,30 @@ using wuxingogo.Reflection;
 public class XBezierArrow2 : XMonoBehaviour
 {
 
-	public MeshFilter mesh1;
-	public MeshFilter mesh2;
+	public MeshFilter mesh1 = null;
+	public MeshFilter mesh2 = null;
 
 	public float step = 1;
 
 	public AnimationCurve yWidthCurve;
-	[Header(" Right Top")]
-	public Vector2 headRTTexCoord = Vector2.one;
-	[Header(" Right Down")]
-	public Vector2 headRDTexCoord = Vector2.zero;
 
 	public float headWid = 0.05f;
-
 	public int stepCount = 100;
 	public bool isNeedUpdate = true;
 
-	public Transform p0;
-	public Transform p1;
-	public Transform p2;
-	public Transform p3;
+	public Transform p0 = null;
+	public Transform p1 = null;
+	public Transform p2 = null;
+	public Transform p3 = null;
 
 	public int UVCount = 4;
-	public Gradient gradient;
+	public Gradient gradient = null;
+
+	public MeshRenderer UpdateUVRenderer = null;
+	//Cannot be set Intger, because UV's Range is [0-1]
+	public Vector2 UVOffset = new Vector2(0.01f, 0);
+
+
 	public Vector3 position0{
 		get{
 			if( p0 != null )
@@ -103,6 +104,7 @@ public class XBezierArrow2 : XMonoBehaviour
 	[X]
 	void InitMesh()
 	{
+		//-----------------Head-----------------//
 		var mesh = new Mesh ();
 		mesh1.sharedMesh = mesh;
 
@@ -121,7 +123,7 @@ public class XBezierArrow2 : XMonoBehaviour
 		float y = step * yWidthCurve.Evaluate( 0.02f ) / 2;
 		float y2 = step * yWidthCurve.Evaluate( 0.01f ) / 2;
 		var p = GetBezierCurve( position0, position1, position2, position3, -headWid );
-		var np = GetBezierCurve( position0, position1, position2, position3, -0f );
+		var np = GetBezierCurve( position0, position1, position2, position3, 0f );
 
 		rightTop = new Vector3(step,step * y2 * 0.5f) + np;
 		rightDown = new Vector3(step,-y2* 0.5f) + np;
@@ -152,6 +154,8 @@ public class XBezierArrow2 : XMonoBehaviour
 		if( type == "Prefab" )
 			XReflectionUtils.AddObjectToObject( mesh, mesh1.gameObject );
 
+
+		//-----------------Trail-----------------//
 		Vertices.Clear ();
 		UV.Clear ();
 		Triangles.Clear ();
@@ -272,10 +276,7 @@ public class XBezierArrow2 : XMonoBehaviour
 		InitMesh();
 
 	}
-	public MeshRenderer UpdateUVRenderer = null;
-	//Cannot be set Intger, because UV's Range is [0-1]
-	public Vector2 UVOffset = Vector2.zero;
-	
+
 	public void UVUpdate()
 	{
 		if (UpdateUVRenderer != null) {

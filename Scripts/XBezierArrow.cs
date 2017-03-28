@@ -57,7 +57,6 @@ public class XBezierArrow : XMonoBehaviour
 
 		var p = GetBezierCurve( position0, position1, position2, position3, -headWid );
 		var np = GetBezierCurve( position0, position1, position2, position3, -0f );
-//			var y = step * yWidthCurve.Evaluate( 0 ) / 2;
 		leftTop = new Vector3(-step,step * y* 0.5f) + p;
 		leftDown = new Vector3(-step,-y* 0.5f) + p;
 		Vertices.Add( leftTop);

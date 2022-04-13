@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using wuxingogo.Runtime;
-
+using wuxingogo;
+using wuxingogo.tools;
 public class XBezierArrowToRolling : XMonoBehaviour {
 	[X]
 	public void Rolling(XBezierArrow sourceArrow)
@@ -43,7 +44,7 @@ public class XBezierArrowToRolling : XMonoBehaviour {
 	MeshFilter CreateMesh(string name, string materialName){
 		GameObject g = new GameObject (name);
 		g.transform.SetParent (transform);
-		GameObjectUtil.AlignTransform (g.transform, transform);
+		GameObjectUtilities.AlignTransform (g.transform, transform);
 
 		var renderer = g.AddComponent<MeshRenderer> ();
 		var mat = Resources.Load<Material>(materialName);

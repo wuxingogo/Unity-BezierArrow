@@ -28,7 +28,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using wuxingogo.Runtime;
 using wuxingogo.Reflection;
-
+using wuxingogo;
 public class XBezierArrow2 : XMonoBehaviour
 {
 

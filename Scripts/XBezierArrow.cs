@@ -2,7 +2,7 @@
 using wuxingogo.Runtime;
 using wuxingogo.Reflection;
 using System.Collections.Generic;
-
+using wuxingogo;
 
 
 public class XBezierArrow : XMonoBehaviour

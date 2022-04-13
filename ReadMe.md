@@ -2,15 +2,17 @@
 
 ## Intro
 
-
+本项目已升级到Unity2019
 
 此项目包含了基于Unity3D实现的三次贝塞尔曲线箭头，用户可以在Unity3D中创建高定制的Bezier曲线。
 
 要运行此项目，你需要拷贝WuxingogoExtension插件的基础功能。
 
-https://github.com/wuxingogo/WuxingogoExtension2018
+https://github.com/wuxingogo/Wuxingogo2019
 
-将此插件目录下的WuxingogoExtension拷贝至你项目的Plugins目录下
+将此插件拷贝到package路径下,然后在manifest中添加该插件
+
+"com.wuxingogo.extension": "file:Wuxingogo2019",
 
 
 ## Features

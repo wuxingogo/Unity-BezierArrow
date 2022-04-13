@@ -8,7 +8,7 @@
 
 要运行此项目，你需要拷贝WuxingogoExtension插件的基础功能。
 
-https://github.com/wuxingogo/WuxingogoExtension
+https://github.com/wuxingogo/WuxingogoExtension2018
 
 将此插件目录下的WuxingogoExtension拷贝至你项目的Plugins目录下
 
